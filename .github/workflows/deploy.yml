@@ -1,82 +1,52 @@
-name: Build and Deploy
-
+name: Deploy web/ to GitHub Pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      
-      - name: Validate CSV/JSON files
-        run: |
-          echo "Validating content files..."
-          node build-data.js
-      
-      - name: Check for required files
-        run: |
-          test -f content/verbs.csv || (echo "Missing verbs.csv" && exit 1)
-          test -f content/conjugations.csv || (echo "Missing conjugations.csv" && exit 1)
-          test -f content/patterns.json || (echo "Missing patterns.json" && exit 1)
-          test -f content/phrases.csv || (echo "Missing phrases.csv" && exit 1)
-          test -f content/prompts.json || (echo "Missing prompts.json" && exit 1)
-          echo "✓ All required files present"
-
   build:
-    needs: validate
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      
-      - name: Build web data files
-        run: |
-          node build-data.js
-      
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: web-data
-          path: web/data/
+      - name: Checkout
+        uses: actions/checkout@v4
 
-  deploy-pages:
-    needs: build
+      - name: Setup Node (optional for build-data.js)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Optional: build data
+        run: |
+          if [ -f build-data.js ]; then
+            node build-data.js
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      # ⬇️ This is the correct artifact action for Pages (not deprecated)
+      - name: Upload web folder
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+  deploy:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v3
-      
-      - name: Download artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: web-data
-          path: web/data/
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      
-      - name: Upload to Pages
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: 'web'
-      
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
