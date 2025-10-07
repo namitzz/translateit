@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Optional: build data
+      - name: "Optional: build data"
         run: |
           if [ -f build-data.js ]; then
             node build-data.js
