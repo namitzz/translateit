@@ -1,0 +1,347 @@
+{
+  "regular_endings": {
+    "ar": {
+      "presente": {
+        "yo": "o",
+        "tú": "as",
+        "él": "a",
+        "nosotros": "amos",
+        "vosotros": "áis",
+        "ellos": "an"
+      },
+      "pretérito": {
+        "yo": "é",
+        "tú": "aste",
+        "él": "ó",
+        "nosotros": "amos",
+        "vosotros": "asteis",
+        "ellos": "aron"
+      },
+      "imperfecto": {
+        "yo": "aba",
+        "tú": "abas",
+        "él": "aba",
+        "nosotros": "ábamos",
+        "vosotros": "abais",
+        "ellos": "aban"
+      },
+      "futuro": {
+        "yo": "é",
+        "tú": "ás",
+        "él": "á",
+        "nosotros": "emos",
+        "vosotros": "éis",
+        "ellos": "án"
+      },
+      "condicional": {
+        "yo": "ía",
+        "tú": "ías",
+        "él": "ía",
+        "nosotros": "íamos",
+        "vosotros": "íais",
+        "ellos": "ían"
+      },
+      "presente_subjuntivo": {
+        "yo": "e",
+        "tú": "es",
+        "él": "e",
+        "nosotros": "emos",
+        "vosotros": "éis",
+        "ellos": "en"
+      }
+    },
+    "er": {
+      "presente": {
+        "yo": "o",
+        "tú": "es",
+        "él": "e",
+        "nosotros": "emos",
+        "vosotros": "éis",
+        "ellos": "en"
+      },
+      "pretérito": {
+        "yo": "í",
+        "tú": "iste",
+        "él": "ió",
+        "nosotros": "imos",
+        "vosotros": "isteis",
+        "ellos": "ieron"
+      },
+      "imperfecto": {
+        "yo": "ía",
+        "tú": "ías",
+        "él": "ía",
+        "nosotros": "íamos",
+        "vosotros": "íais",
+        "ellos": "ían"
+      },
+      "futuro": {
+        "yo": "é",
+        "tú": "ás",
+        "él": "á",
+        "nosotros": "emos",
+        "vosotros": "éis",
+        "ellos": "án"
+      },
+      "condicional": {
+        "yo": "ía",
+        "tú": "ías",
+        "él": "ía",
+        "nosotros": "íamos",
+        "vosotros": "íais",
+        "ellos": "ían"
+      },
+      "presente_subjuntivo": {
+        "yo": "a",
+        "tú": "as",
+        "él": "a",
+        "nosotros": "amos",
+        "vosotros": "áis",
+        "ellos": "an"
+      }
+    },
+    "ir": {
+      "presente": {
+        "yo": "o",
+        "tú": "es",
+        "él": "e",
+        "nosotros": "imos",
+        "vosotros": "ís",
+        "ellos": "en"
+      },
+      "pretérito": {
+        "yo": "í",
+        "tú": "iste",
+        "él": "ió",
+        "nosotros": "imos",
+        "vosotros": "isteis",
+        "ellos": "ieron"
+      },
+      "imperfecto": {
+        "yo": "ía",
+        "tú": "ías",
+        "él": "ía",
+        "nosotros": "íamos",
+        "vosotros": "íais",
+        "ellos": "ían"
+      },
+      "futuro": {
+        "yo": "é",
+        "tú": "ás",
+        "él": "á",
+        "nosotros": "emos",
+        "vosotros": "éis",
+        "ellos": "án"
+      },
+      "condicional": {
+        "yo": "ía",
+        "tú": "ías",
+        "él": "ía",
+        "nosotros": "íamos",
+        "vosotros": "íais",
+        "ellos": "ían"
+      },
+      "presente_subjuntivo": {
+        "yo": "a",
+        "tú": "as",
+        "él": "a",
+        "nosotros": "amos",
+        "vosotros": "áis",
+        "ellos": "an"
+      }
+    }
+  },
+  "stem_changes": {
+    "e_ie": {
+      "description": "e → ie in stressed syllables",
+      "affected_persons": ["yo", "tú", "él", "ellos"],
+      "tenses": ["presente", "presente_subjuntivo"],
+      "examples": ["pensar", "querer", "sentir"]
+    },
+    "o_ue": {
+      "description": "o → ue in stressed syllables",
+      "affected_persons": ["yo", "tú", "él", "ellos"],
+      "tenses": ["presente", "presente_subjuntivo"],
+      "examples": ["volver", "poder", "dormir"]
+    },
+    "e_i": {
+      "description": "e → i in stressed syllables",
+      "affected_persons": ["yo", "tú", "él", "ellos"],
+      "tenses": ["presente", "presente_subjuntivo", "pretérito"],
+      "examples": ["pedir", "servir"]
+    },
+    "u_ue": {
+      "description": "u → ue in stressed syllables",
+      "affected_persons": ["yo", "tú", "él", "ellos"],
+      "tenses": ["presente"],
+      "examples": ["jugar"]
+    }
+  },
+  "spelling_changes": {
+    "c_qu": {
+      "description": "c → qu before e",
+      "rule": "Verbs ending in -car change c to qu before e",
+      "examples": ["buscar", "sacar", "tocar"],
+      "tenses": ["pretérito_yo", "presente_subjuntivo"]
+    },
+    "g_gu": {
+      "description": "g → gu before e",
+      "rule": "Verbs ending in -gar change g to gu before e",
+      "examples": ["llegar", "pagar", "jugar"],
+      "tenses": ["pretérito_yo", "presente_subjuntivo"]
+    },
+    "z_c": {
+      "description": "z → c before e",
+      "rule": "Verbs ending in -zar change z to c before e",
+      "examples": ["empezar", "comenzar", "almorzar"],
+      "tenses": ["pretérito_yo", "presente_subjuntivo"]
+    },
+    "i_y": {
+      "description": "i → y between vowels",
+      "rule": "Verbs with stem ending in vowel change i to y in certain forms",
+      "examples": ["leer", "creer", "construir"],
+      "tenses": ["pretérito_él", "pretérito_ellos"]
+    },
+    "gu_g": {
+      "description": "gu → g before a/o",
+      "rule": "Verbs ending in -guir drop u before a/o",
+      "examples": ["seguir", "conseguir"],
+      "tenses": ["presente_yo", "presente_subjuntivo"]
+    },
+    "c_z": {
+      "description": "c → z before a/o",
+      "rule": "Verbs ending in -cer/-cir preceded by consonant change c to z before a/o",
+      "examples": ["vencer", "convencer"],
+      "tenses": ["presente_yo", "presente_subjuntivo"]
+    },
+    "c_zc": {
+      "description": "c → zc before a/o",
+      "rule": "Verbs ending in -cer/-cir preceded by vowel add z before c",
+      "examples": ["conocer", "parecer", "conducir"],
+      "tenses": ["presente_yo", "presente_subjuntivo"]
+    }
+  },
+  "irregular_patterns": {
+    "preterite_u": {
+      "description": "Irregular preterite with 'u' stem",
+      "verbs": ["tener", "estar", "poder", "poner", "saber"],
+      "stems": {
+        "tener": "tuv",
+        "estar": "estuv",
+        "poder": "pud",
+        "poner": "pus",
+        "saber": "sup"
+      },
+      "endings": {
+        "yo": "e",
+        "tú": "iste",
+        "él": "o",
+        "nosotros": "imos",
+        "vosotros": "isteis",
+        "ellos": "ieron"
+      }
+    },
+    "preterite_i": {
+      "description": "Irregular preterite with 'i' stem",
+      "verbs": ["hacer", "querer", "venir"],
+      "stems": {
+        "hacer": "hic/hiz",
+        "querer": "quis",
+        "venir": "vin"
+      },
+      "endings": {
+        "yo": "e",
+        "tú": "iste",
+        "él": "o",
+        "nosotros": "imos",
+        "vosotros": "isteis",
+        "ellos": "ieron"
+      }
+    },
+    "preterite_j": {
+      "description": "Irregular preterite with 'j' stem",
+      "verbs": ["decir", "traer", "traducir", "conducir"],
+      "stems": {
+        "decir": "dij",
+        "traer": "traj",
+        "traducir": "traduj",
+        "conducir": "conduj"
+      },
+      "endings": {
+        "yo": "e",
+        "tú": "iste",
+        "él": "o",
+        "nosotros": "imos",
+        "vosotros": "isteis",
+        "ellos": "eron"
+      },
+      "note": "ellos ends in -eron (not -ieron)"
+    },
+    "future_irregular": {
+      "description": "Irregular future stems",
+      "verbs": ["hacer", "decir", "poder", "poner", "querer", "saber", "salir", "tener", "venir"],
+      "stems": {
+        "hacer": "har",
+        "decir": "dir",
+        "poder": "podr",
+        "poner": "pondr",
+        "querer": "querr",
+        "saber": "sabr",
+        "salir": "saldr",
+        "tener": "tendr",
+        "venir": "vendr"
+      },
+      "endings": {
+        "yo": "é",
+        "tú": "ás",
+        "él": "á",
+        "nosotros": "emos",
+        "vosotros": "éis",
+        "ellos": "án"
+      }
+    }
+  },
+  "tenses": [
+    "presente",
+    "pretérito",
+    "imperfecto",
+    "futuro",
+    "condicional",
+    "presente_perfecto",
+    "presente_subjuntivo"
+  ],
+  "persons": [
+    "yo",
+    "tú",
+    "él",
+    "nosotros",
+    "vosotros",
+    "ellos"
+  ],
+  "person_labels": {
+    "yo": "I",
+    "tú": "you (informal)",
+    "él": "he/she/you (formal)",
+    "nosotros": "we",
+    "vosotros": "you all (Spain)",
+    "ellos": "they/you all"
+  },
+  "tense_labels": {
+    "presente": "Present",
+    "pretérito": "Preterite (simple past)",
+    "imperfecto": "Imperfect (ongoing past)",
+    "futuro": "Future",
+    "condicional": "Conditional",
+    "presente_perfecto": "Present Perfect",
+    "presente_subjuntivo": "Present Subjunctive"
+  },
+  "tense_explanations": {
+    "presente": "Used for actions happening now, habitual actions, and general truths",
+    "pretérito": "Used for completed actions in the past with a specific time frame",
+    "imperfecto": "Used for ongoing past actions, habitual past actions, descriptions, and time/age in the past",
+    "futuro": "Used for actions that will happen in the future",
+    "condicional": "Used for actions that would happen under certain conditions",
+    "presente_perfecto": "Used for actions that happened in the recent past or have relevance to the present",
+    "presente_subjuntivo": "Used to express doubt, wishes, emotions, and hypothetical situations"
+  }
+}

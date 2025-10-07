@@ -1,0 +1,82 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Validate CSV/JSON files
+        run: |
+          echo "Validating content files..."
+          node build-data.js
+      
+      - name: Check for required files
+        run: |
+          test -f content/verbs.csv || (echo "Missing verbs.csv" && exit 1)
+          test -f content/conjugations.csv || (echo "Missing conjugations.csv" && exit 1)
+          test -f content/patterns.json || (echo "Missing patterns.json" && exit 1)
+          test -f content/phrases.csv || (echo "Missing phrases.csv" && exit 1)
+          test -f content/prompts.json || (echo "Missing prompts.json" && exit 1)
+          echo "✓ All required files present"
+
+  build:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Build web data files
+        run: |
+          node build-data.js
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: web-data
+          path: web/data/
+
+  deploy-pages:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: web-data
+          path: web/data/
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      
+      - name: Upload to Pages
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: 'web'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
