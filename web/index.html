@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Spanish verb conjugations with an interactive chatbot. Practice, quiz, and master Spanish verbs offline!">
+    <meta name="theme-color" content="#4A90E2">
+    <title>SpanishVerb Tutor - Learn Spanish Conjugations</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.webmanifest">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo-area">
+                    <img src="assets/logo.svg" alt="SpanishVerb Tutor" class="logo" />
+                    <h1>SpanishVerb Tutor</h1>
+                </div>
+                <div class="header-actions">
+                    <button id="settings-btn" class="icon-btn" aria-label="Settings">
+                        <span>⚙️</span>
+                    </button>
+                    <button id="install-btn" class="icon-btn hidden" aria-label="Install app">
+                        <span>📥</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- First-time Setup Wizard -->
+        <div id="setup-wizard" class="modal hidden">
+            <div class="modal-content wizard-content">
+                <h2>Welcome! Let's Set Up Your Learning</h2>
+                <div id="wizard-step-1" class="wizard-step">
+                    <h3>What's your Spanish level?</h3>
+                    <div class="button-group">
+                        <button class="btn btn-large" data-level="A1">A1 - Beginner</button>
+                        <button class="btn btn-large" data-level="A2">A2 - Elementary</button>
+                        <button class="btn btn-large" data-level="B1">B1 - Intermediate</button>
+                    </div>
+                </div>
+                <div id="wizard-step-2" class="wizard-step hidden">
+                    <h3>Do you have an upcoming exam?</h3>
+                    <input type="date" id="exam-date" class="input-field" />
+                    <p class="hint">Optional - helps us create a study plan</p>
+                    <button class="btn" id="skip-date">Skip</button>
+                </div>
+                <div id="wizard-step-3" class="wizard-step hidden">
+                    <h3>How many minutes per day can you practice?</h3>
+                    <div class="button-group">
+                        <button class="btn btn-large" data-minutes="10">10 min</button>
+                        <button class="btn btn-large" data-minutes="20">20 min</button>
+                        <button class="btn btn-large" data-minutes="30">30 min</button>
+                    </div>
+                </div>
+                <div id="wizard-complete" class="wizard-step hidden">
+                    <h3>🎉 You're all set!</h3>
+                    <p>Your personalized study plan is ready. Let's start learning!</p>
+                    <button class="btn btn-primary btn-large" id="start-learning">Start Learning</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Modal -->
+        <div id="settings-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Settings</h2>
+                    <button class="close-btn" id="close-settings">&times;</button>
+                </div>
+                <div class="settings-content">
+                    <div class="setting-item">
+                        <label for="theme-toggle">Dark Mode</label>
+                        <input type="checkbox" id="theme-toggle" class="toggle" />
+                    </div>
+                    <div class="setting-item">
+                        <label for="dyslexia-toggle">Dyslexia-Friendly Font</label>
+                        <input type="checkbox" id="dyslexia-toggle" class="toggle" />
+                    </div>
+                    <div class="setting-item">
+                        <label for="tts-toggle">Enable Text-to-Speech</label>
+                        <input type="checkbox" id="tts-toggle" class="toggle" checked />
+                    </div>
+                    <div class="setting-item">
+                        <label for="llm-toggle">LLM Assistance (Optional)</label>
+                        <input type="checkbox" id="llm-toggle" class="toggle" />
+                    </div>
+                    <div class="setting-item" id="llm-config" style="display: none;">
+                        <label for="llm-endpoint">LLM Endpoint URL</label>
+                        <input type="text" id="llm-endpoint" class="input-field" placeholder="http://localhost:11434 (Ollama)" />
+                    </div>
+                    <div class="setting-item">
+                        <button class="btn" id="reset-progress">Reset All Progress</button>
+                    </div>
+                    <div class="setting-item">
+                        <button class="btn" id="export-data">Export Progress (CSV)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Progress Summary -->
+            <div class="progress-summary">
+                <div class="progress-ring-container">
+                    <svg class="progress-ring" width="120" height="120">
+                        <circle class="progress-ring-bg" cx="60" cy="60" r="52" />
+                        <circle class="progress-ring-fill" cx="60" cy="60" r="52" id="progress-circle" />
+                    </svg>
+                    <div class="progress-text">
+                        <span id="progress-percent">0%</span>
+                        <span class="progress-label">Complete</span>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-value" id="verbs-learned">0</span>
+                        <span class="stat-label">Verbs Learned</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="streak-days">0</span>
+                        <span class="stat-label">Day Streak</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="total-drills">0</span>
+                        <span class="stat-label">Drills Done</span>
+                    </div>
+                </div>
+                <div class="weak-spots" id="weak-spots">
+                    <h3>Focus Areas:</h3>
+                    <div id="weak-spots-chips"></div>
+                </div>
+            </div>
+
+            <!-- Split View Container -->
+            <div class="split-view">
+                <!-- Chat Panel -->
+                <div class="chat-panel">
+                    <div class="panel-header">
+                        <h2>💬 Chat Tutor</h2>
+                    </div>
+                    <div id="chat-messages" class="chat-messages"></div>
+                    <div class="chat-input-container">
+                        <input 
+                            type="text" 
+                            id="chat-input" 
+                            class="chat-input" 
+                            placeholder="Ask me anything... e.g., 'conjugate hablar in present'" 
+                            aria-label="Chat input"
+                        />
+                        <button id="send-btn" class="btn btn-primary" aria-label="Send message">Send</button>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-btn" data-action="conjugate">📝 Conjugate</button>
+                        <button class="quick-btn" data-action="sentence">💬 Use in Sentence</button>
+                        <button class="quick-btn" data-action="quiz">🎯 Quiz Me</button>
+                        <button class="quick-btn" data-action="pronounce">🔊 Pronounce</button>
+                    </div>
+                </div>
+
+                <!-- Drill Panel -->
+                <div class="drill-panel">
+                    <div class="panel-header">
+                        <h2>🎯 Practice Drills</h2>
+                    </div>
+                    <div id="drill-mode-selector" class="drill-mode-selector">
+                        <button class="mode-btn active" data-mode="quick_5">Quick 5</button>
+                        <button class="mode-btn" data-mode="exam_20">Exam 20</button>
+                        <button class="mode-btn" data-mode="custom">Custom</button>
+                    </div>
+                    <div id="drill-content" class="drill-content">
+                        <div class="drill-start">
+                            <p>Select a test mode and click Start to begin practicing!</p>
+                            <button id="start-drill-btn" class="btn btn-primary btn-large">Start Drill</button>
+                        </div>
+                    </div>
+                    <div id="drill-results" class="drill-results hidden">
+                        <h3>Results</h3>
+                        <div class="results-summary">
+                            <div class="result-score">
+                                <span id="score-display">0/0</span>
+                                <span>Score</span>
+                            </div>
+                            <div class="result-time">
+                                <span id="time-display">0:00</span>
+                                <span>Time</span>
+                            </div>
+                        </div>
+                        <div id="weak-areas"></div>
+                        <div class="result-actions">
+                            <button class="btn" id="retry-drill">Try Again</button>
+                            <button class="btn" id="new-drill">New Drill</button>
+                            <button class="btn" id="export-results">Export Results</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Learn Spanish verbs offline • <a href="https://github.com/namitzz/translateit" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="verbEngine.js"></script>
+    <script src="nlp.js"></script>
+    <script src="tts.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

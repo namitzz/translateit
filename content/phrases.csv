@@ -1,0 +1,166 @@
+infinitive,english_context,spanish_sentence,translation,level
+hablar,greeting someone,Hablo español e inglés.,I speak Spanish and English.,A1
+hablar,phone conversation,¿Puedo hablar con María?,Can I speak with Maria?,A1
+hablar,discussing languages,Ella habla tres idiomas.,She speaks three languages.,A1
+comer,mealtime,Comemos a las dos.,We eat at two o'clock.,A1
+comer,preferences,Me gusta comer frutas.,I like to eat fruits.,A1
+comer,restaurant,¿Qué vas a comer?,What are you going to eat?,A1
+vivir,location,Vivo en Madrid.,I live in Madrid.,A1
+vivir,housing,Vivimos en un apartamento.,We live in an apartment.,A1
+vivir,experience,He vivido aquí tres años.,I have lived here three years.,A2
+ser,identity,Soy estudiante.,I am a student.,A1
+ser,origin,Ella es de México.,She is from Mexico.,A1
+ser,time,Son las cinco.,It's five o'clock.,A1
+estar,location,Estoy en casa.,I am at home.,A1
+estar,temporary state,Estoy cansado.,I am tired.,A1
+estar,weather,Está nublado hoy.,It's cloudy today.,A1
+tener,possession,Tengo un coche.,I have a car.,A1
+tener,age,Tengo veinte años.,I am twenty years old.,A1
+tener,obligation,Tengo que estudiar.,I have to study.,A1
+hacer,activity,Hago ejercicio todos los días.,I exercise every day.,A1
+hacer,weather,Hace frío hoy.,It's cold today.,A1
+hacer,creation,Ella hace pasteles.,She makes cakes.,A1
+ir,movement,Voy al cine.,I'm going to the cinema.,A1
+ir,future plans,Vamos a estudiar.,We are going to study.,A1
+ir,past action,Fui a la playa ayer.,I went to the beach yesterday.,A2
+poder,ability,Puedo nadar bien.,I can swim well.,A1
+poder,permission,¿Puedo entrar?,May I come in?,A1
+poder,possibility,No puedo ir mañana.,I can't go tomorrow.,A1
+querer,desire,Quiero un café.,I want a coffee.,A1
+querer,love,Te quiero mucho.,I love you very much.,A1
+querer,invitation,¿Quieres bailar?,Do you want to dance?,A1
+saber,knowledge,Sé la respuesta.,I know the answer.,A1
+saber,skill,Ella sabe cocinar.,She knows how to cook.,A1
+saber,finding out,Supe la verdad ayer.,I found out the truth yesterday.,A2
+ver,sight,Veo una estrella.,I see a star.,A1
+ver,watching,Vemos películas los domingos.,We watch movies on Sundays.,A1
+ver,meeting,Te veo mañana.,I'll see you tomorrow.,A1
+dar,giving,Doy clases de inglés.,I give English classes.,A1
+dar,gift,Le di un regalo.,I gave him/her a gift.,A2
+dar,direction,Da vuelta a la derecha.,Turn right.,A2
+decir,speech,Digo la verdad.,I tell the truth.,A1
+decir,reported speech,Ella dice que sí.,She says yes.,A1
+decir,request,¿Qué dices?,What do you say?,A1
+poner,placement,Pongo la mesa.,I set the table.,A1
+poner,clothing,Me pongo el abrigo.,I put on my coat.,A2
+poner,turning on,Pon la radio.,Turn on the radio.,A2
+venir,arrival,Vengo de la escuela.,I come from school.,A1
+venir,future visit,Vienen el lunes.,They're coming on Monday.,A1
+venir,origin,Vengo de España.,I come from Spain.,A1
+salir,departure,Salgo a las ocho.,I leave at eight.,A1
+salir,dating,Salgo con mis amigos.,I go out with my friends.,A1
+salir,result,Todo salió bien.,Everything turned out well.,A2
+pensar,thinking,Pienso en ti.,I think about you.,A1
+pensar,opinion,¿Qué piensas de esto?,What do you think about this?,A1
+pensar,planning,Pienso viajar en julio.,I'm planning to travel in July.,A2
+estudiar,school,Estudio español.,I study Spanish.,A1
+estudiar,university,Estudia medicina.,He/She studies medicine.,A1
+estudiar,exam preparation,Estudié toda la noche.,I studied all night.,A2
+trabajar,employment,Trabajo en un hospital.,I work in a hospital.,A1
+trabajar,effort,Trabajamos mucho.,We work a lot.,A1
+trabajar,career,Trabajó allí cinco años.,He/She worked there five years.,A2
+comprar,shopping,Compro pan en la panadería.,I buy bread at the bakery.,A1
+comprar,purchase,Compré un libro nuevo.,I bought a new book.,A2
+comprar,gift,Voy a comprar un regalo.,I'm going to buy a gift.,A1
+vender,business,Venden ropa aquí.,They sell clothes here.,A1
+vender,transaction,Vendí mi coche.,I sold my car.,A2
+vender,offering,Se vende casa.,House for sale.,A2
+escribir,communication,Escribo un email.,I write an email.,A1
+escribir,literature,Ella escribe novelas.,She writes novels.,A2
+escribir,note,Escribe tu nombre aquí.,Write your name here.,A1
+leer,reading,Leo el periódico.,I read the newspaper.,A1
+leer,education,Leen mucho en clase.,They read a lot in class.,A1
+leer,past activity,Leí ese libro el año pasado.,I read that book last year.,A2
+beber,drinking,Bebo agua.,I drink water.,A1
+beber,social,Bebemos café juntos.,We drink coffee together.,A1
+beber,health,No bebo alcohol.,I don't drink alcohol.,A1
+aprender,learning,Aprendo rápido.,I learn quickly.,A1
+aprender,skill acquisition,Aprendí a nadar.,I learned to swim.,A2
+aprender,education,Aprendemos español.,We learn Spanish.,A1
+entender,comprehension,Entiendo español.,I understand Spanish.,A1
+entender,clarity,No entiendo la pregunta.,I don't understand the question.,A1
+entender,empathy,Te entiendo perfectamente.,I understand you perfectly.,A2
+necesitar,need,Necesito ayuda.,I need help.,A1
+necesitar,requirement,Necesitamos más tiempo.,We need more time.,A1
+necesitar,urgency,Necesitaba dinero.,I needed money.,A2
+gustar,liking,Me gusta la música.,I like music.,A1
+gustar,preference,Le gustan los gatos.,He/She likes cats.,A1
+gustar,past,Me gustó mucho.,I liked it a lot.,A2
+encontrar,finding,Encontré mis llaves.,I found my keys.,A2
+encontrar,meeting,Nos encontramos a las seis.,We meet at six.,A2
+encontrar,discovery,Encontraron un tesoro.,They found a treasure.,B1
+buscar,searching,Busco trabajo.,I'm looking for a job.,A1
+buscar,seeking,Busca su teléfono.,He/She is looking for his/her phone.,A1
+buscar,investigation,Buscaron por todas partes.,They searched everywhere.,A2
+llegar,arrival,Llego a tiempo.,I arrive on time.,A1
+llegar,destination,Llegamos a Barcelona.,We arrive in Barcelona.,A1
+llegar,achievement,Llegó a ser famoso.,He became famous.,B1
+volver,return,Vuelvo a casa.,I return home.,A1
+volver,repetition,Vuelve a intentar.,Try again.,A2
+volver,comeback,Volvieron del viaje.,They returned from the trip.,A2
+dormir,sleeping,Duermo ocho horas.,I sleep eight hours.,A1
+dormir,bedtime,Los niños duermen temprano.,The children sleep early.,A1
+dormir,rest,Dormí muy bien.,I slept very well.,A2
+empezar,beginning,Empiezo a las nueve.,I start at nine.,A1
+empezar,initiation,Empezamos el proyecto.,We start the project.,A1
+empezar,past start,Empezó a llover.,It started to rain.,A2
+terminar,completion,Termino el trabajo.,I finish the work.,A1
+terminar,ending,Terminamos a las cinco.,We finish at five.,A1
+terminar,conclusion,Terminó la película.,The movie ended.,A2
+pedir,request,Pido un favor.,I ask for a favor.,A1
+pedir,ordering,Pedimos pizza.,We order pizza.,A1
+pedir,past request,Pidió ayuda.,He/She asked for help.,A2
+preguntar,inquiry,Pregunto por el precio.,I ask about the price.,A1
+preguntar,question,Pregunta mucho en clase.,He/She asks a lot in class.,A1
+preguntar,past query,Pregunté por ti.,I asked about you.,A2
+ayudar,assistance,Ayudo a mi madre.,I help my mother.,A1
+ayudar,support,Nos ayudan siempre.,They always help us.,A1
+ayudar,past help,Me ayudó mucho.,He/She helped me a lot.,A2
+llamar,calling,Llamo a mi amiga.,I call my friend.,A1
+llamar,naming,Me llamo Ana.,My name is Ana.,A1
+llamar,phone call,Llamé anoche.,I called last night.,A2
+abrir,opening,Abro la ventana.,I open the window.,A1
+abrir,business hours,Abren a las diez.,They open at ten.,A1
+abrir,unveiling,Abrieron el regalo.,They opened the gift.,A2
+cerrar,closing,Cierro la puerta.,I close the door.,A1
+cerrar,business,Cierran los domingos.,They close on Sundays.,A1
+cerrar,completion,Cerré con llave.,I locked (closed with key).,A2
+conocer,meeting,Conozco a tu hermano.,I know your brother.,A1
+conocer,familiarity,Conocemos la ciudad.,We know the city.,A1
+conocer,past meeting,Conocí a mi esposo aquí.,I met my husband here.,A2
+parecer,seeming,Me parece interesante.,It seems interesting to me.,A2
+parecer,appearance,Pareces cansado.,You look tired.,A2
+parecer,opinion,¿Qué te parece?,What do you think?,A2
+sentir,feeling,Siento alegría.,I feel joy.,A1
+sentir,regret,Lo siento mucho.,I'm very sorry.,A1
+sentir,emotion,Sentí miedo.,I felt fear.,A2
+servir,serving,Sirvo la comida.,I serve the food.,A1
+servir,usefulness,Esto sirve para cortar.,This is used for cutting.,A2
+servir,profession,Sirvió en el ejército.,He served in the army.,B1
+seguir,following,Sigo las instrucciones.,I follow the instructions.,A2
+seguir,continuation,Sigue estudiando.,Keep studying.,A2
+seguir,pursuit,Lo siguieron a casa.,They followed him home.,B1
+llevar,carrying,Llevo una mochila.,I carry a backpack.,A1
+llevar,wearing,Lleva un vestido rojo.,She wears a red dress.,A1
+llevar,time,Llevo aquí dos años.,I've been here two years.,A2
+dejar,leaving,Dejo mi bolso aquí.,I leave my bag here.,A1
+dejar,quitting,Dejé de fumar.,I quit smoking.,A2
+dejar,allowing,Déjame ver.,Let me see.,A2
+tomar,taking,Tomo el autobús.,I take the bus.,A1
+tomar,drinking,Tomamos café.,We drink coffee.,A1
+tomar,decision,Tomó una decisión.,He/She made a decision.,A2
+pasar,passing,Paso por tu casa.,I pass by your house.,A1
+pasar,happening,¿Qué pasa?,What's happening?,A1
+pasar,time,Pasamos el día en la playa.,We spent the day at the beach.,A2
+mirar,looking,Miro por la ventana.,I look through the window.,A1
+mirar,watching,Mira este video.,Watch this video.,A1
+mirar,observation,Miraron el paisaje.,They looked at the landscape.,A2
+escuchar,listening,Escucho música.,I listen to music.,A1
+escuchar,hearing,Escucha atentamente.,Listen carefully.,A1
+escuchar,past listening,Escuché tu mensaje.,I heard your message.,A2
+esperar,waiting,Espero el tren.,I wait for the train.,A1
+esperar,hoping,Espero que sí.,I hope so.,A1
+esperar,past waiting,Esperé dos horas.,I waited two hours.,A2
+viajar,traveling,Viajo mucho.,I travel a lot.,A1
+viajar,trip,Viajamos a Italia.,We travel to Italy.,A1
+viajar,past trip,Viajé el verano pasado.,I traveled last summer.,A2
